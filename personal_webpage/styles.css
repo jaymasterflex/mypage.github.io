@@ -1,0 +1,193 @@
+.header {grid-area: header;}
+.profile {grid-area: profile;}
+.about {grid-area: about;}
+.footer {grid-area: contact;}
+
+:root {
+    --body-color: hsl(232, 19%, 10%);
+    --div-color: hsl(232, 19%, 15%);
+    --text-color: white;
+    --container-color: hsl(228, 28%, 20%);
+    --logo-color: hsl(37, 97%, 39%); 
+    --nav-active: rgb(126, 9, 9);
+}
+
+
+body {
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--body-color);
+    width: 100%;
+}
+
+.logo {
+    float: left;
+    color: white;
+    width: 10%;
+    padding: 0%;
+    border: 0pc;
+    font-size: 15px;
+    background-color: var(--logo-color);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-weight: lighter;
+    color: var(--div-color);
+}
+
+label {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+    padding: 0%;
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+      float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 24px 26px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 15px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 20px;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: var(--nav-active);
+    color: white;
+  }
+
+
+.grid-container {
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-areas: 
+    'header header header header header header'
+    'profile profile about about about about '
+    'contact contact contact contact contact contact'; 
+    grid-gap: 5px;
+    box-shadow: hsl(232, 19%, 15%);
+    padding: 0px;
+}
+
+.header {
+    border-radius: 15px 15px;
+}
+
+.footer {
+    background-color: var(--div-color);
+    border-radius: 15px 0px 15px 0;
+}
+
+.profile {
+    background-color: hsl(27, 90%, 23%);
+    border-radius: 15px 15px 15px 0;
+}
+
+.profile > img {
+    width: 70%;
+    background-color: wheat;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1.9);
+    border-radius: 25%;
+    border: 1px solid black;
+    padding: 4px;
+}
+
+.profile > a {
+    padding-right: 15px;
+}
+
+.about {
+    width: 100%;
+    text-align: center;
+    background-color: var(--div-color);
+    border-radius: 15px 0px 0px 0;
+}
+.grid-container > div {
+    /*background-color: var(--div-color);*/
+    padding: 20px 50px;
+    font-size: 15px;
+    color: var(--text-color);
+    
+}
+
+input[type=text], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: var(--nav-active);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: var(--logo-color);
+}
+
+.image > img {
+    position: relative;
+    text-align: center;
+    opacity: 0.8;
+    width: 100%;
+     
+}
+
+.top-left {
+    color: var(--text-color);
+    position: absolute;
+    top: 108px;
+    left: 16px;
+    font-size: 30px;
+    text-shadow: 2px 2px #ff0000;
+    opacity: 0.8;
+}
+
+
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.container {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
+}
+
+.skills {
+  text-align: center; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+.html {width: 90%; background-color: var(--nav-active);}
+.css {width: 68%; background-color: var(--nav-active);} 
+.js {width: 45%; background-color: var(--nav-active);}
+.python {width: 30%; background-color: var(--nav-active);} 
+
